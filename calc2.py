@@ -20,19 +20,22 @@ def calcula (num1, num2, op):
         return (num1 / num2)
     else:
         return 0
+
 while True:
+    print('\n')
     print('-------------- CALCULADORA -------------- ')
     print('Selecone o número correspondente à operação')
     print('1: Soma \n2: Subtração \n3: Multiplicação \n4: Divisão \n0: Sair')
 
-    op = int(input('Digite a operação'))
-    if not (op == 0):
-        
-        if (op == 1) or (op ==2):
-            num1 = int(input('Digite primeiro número'))
-            num2 = int(input('Digite o segundo número'))
-
+    op = int(input('\n\nDigite a operação \n'))
+    if (op == 1) or (op == 2) or (op == 3) or (op == 4):
+        num1 = int(input('\nDigite primeiro número: \n'))
+        num2 = int(input('Digite o segundo número: \n'))
         calcula(num1, num2, op)
+        print('--->> Resultado =',calcula(num1, num2, op), '<<---')
+    else:
+        print('Essa opção não existe!')
+    if (op == 0):
+            break
 
-        print('--->>Resultado = ',calcula(num1, num2, op), '<<---')
-    
+print('\n')
