@@ -1,6 +1,8 @@
 from time import sleep
 
-for cont in range (10, 0, -1):
+seg = int(input("Indique um segundo inicial para a contagem: "))
+print("Iniciando contagem regressiva... ")
+for cont in range (seg, 0, -1):
     print (cont)
-    sleep (0.5)
+    sleep (1)
 print ('BUUUUM!')
