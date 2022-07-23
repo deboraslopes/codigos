@@ -26,7 +26,9 @@ print('Selecone o número correspondente à operação')
 print('1: Soma \n2: Subtração \n3: Multiplicação \n4: Divisão \n0: Sair')
 
 op = int(input('Digite a operação'))
-num1 = int(input('Digite primeiro número'))
-num2 = int(input('Digite o segundo número'))
+if (op == 0):
+if (op == 1) or (op ==2):
+    num1 = int(input('Digite primeiro número'))
+    num2 = int(input('Digite o segundo número'))
 calcula(num1, num2, op)
 print('--->>Resultado = ',calcula(num1, num2, op), '<<---')
