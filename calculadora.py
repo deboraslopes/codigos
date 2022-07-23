@@ -20,8 +20,8 @@ def calcula (num1, num2, op):
     else:
         return 0
 
-num1 = 18
-num2 = 9
-op = 4
+num1 = 2978
+num2 = 61
+op = 2
 resultado = calcula (num1, num2, op)
 print(resultado)
