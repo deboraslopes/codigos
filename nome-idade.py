@@ -3,14 +3,15 @@
 # Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.
 
 anoCorreto = False
+nome = input("Nome: ")
 while (anoCorreto == False):
-   print("Ano do Nascimento: ")
-   try:
-       ano = int(input())
+    try:
+       ano = int(input("Ano de nascimento: "))
        if (ano > 1922 and ano < 2021):
+           idade = 2022 - ano
            anoCorreto = True
-           print("Idade=",2022 - ano, "!")
+           print(f"{nome} tem/terá {idade} anos em 2022.")
        else :
-           print("Informe um ano entre 1922 e 2021")
-   except:
-       print("Caracter inválido, por favor insira o ano de nascimento")
+           print("Informe um ano entre 1922 e 2021!")
+    except:
+       print("Caracter inválido, por favor insira o ano de nascimento!")
