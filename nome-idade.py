@@ -8,10 +8,10 @@ while(anoCorreto == False):
 
 numeroCorreto = False
 while (numeroCorreto == False):
-   numero = int(input("Insira um número par"))
+   numero = input("Insira um número par")
    try:
       numero = int(input())
-       if (numero%2 == 0):
+      if (numero%2 == 0):
            numeroCorreto = True
            print("Você digitou um numero par !")
        else :

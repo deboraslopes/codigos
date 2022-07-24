@@ -1,12 +1,13 @@
+
 numeroCorreto = False
 while (numeroCorreto == False):
    numero = int(input("Insira um número par"))
    try:
       numero = int(input())
-       if (numero%2 == 0):
+      if (numero%2 == 0):
            numeroCorreto = True
            print("Você digitou um numero par !")
-       else :
+      else :
            print("Você digitou um número impar")
    except:
        print("Caracter inválido, por favor digite um número par")
