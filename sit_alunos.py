@@ -13,3 +13,24 @@
 #   - o maior número de faltas;
 #   - a média geral das notas dos alunos;
 #   - e a maior média.
+
+import pandas as pd
+
+df_alunos = pd.read_csv("alunos_situacao.csv", sep=";")
+df_alunos.head()
+
+media = (df_alunos["nota_1"] + df_alunos["nota_2"])/2
+df_alunos["media"] = media
+print(df_alunos.head())
+
+
+
+if (df_alunos["media"]>=7) or (df_alunos["faltas"]<=5):
+    situacao = df_alunos["situacao"] = "APROVADO"
+    df_alunos["situacao"] = situacao
+elif (df_alunos["media"]<7) or (df_alunos["faltas"]>5):
+    situacao = df_alunos.loc["situacao"] = "REPROVADO"
+
+print(df_alunos.head())
+
+
