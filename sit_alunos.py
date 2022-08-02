@@ -16,21 +16,35 @@
 
 import pandas as pd
 
-df_alunos = pd.read_csv("alunos_situacao.csv", sep=";")
+df_alunos = pd.read_csv("notas_alunos", sep=";")
 df_alunos.head()
 
+print('Tabela inicial')
+print(df_alunos)
+
+print('\n')
+
+print('Criando coluna média:')
 media = (df_alunos["nota_1"] + df_alunos["nota_2"])/2
 df_alunos["media"] = media
 print(df_alunos.head())
 
+print('\n')
 
-
-if (df_alunos["media"]>=7) or (df_alunos["faltas"]<=5):
-    situacao = df_alunos["situacao"] = "APROVADO"
-    df_alunos["situacao"] = situacao
-elif (df_alunos["media"]<7) or (df_alunos["faltas"]>5):
-    situacao = df_alunos.loc["situacao"] = "REPROVADO"
-
+print('Criando coluna situção:')
+df_alunos.loc[(df_alunos["media"] >= 7) | (df_alunos["faltas"] <= 5), "situacao"] = "APROVADO"
+df_alunos.loc[(df_alunos["media"] < 7) | (df_alunos["faltas"]>5), "situacao"] = "REPROVADO"
 print(df_alunos.head())
+
+print('\n')
+
+print('Dados solicitados:')
+maxFaltas = df_alunos["faltas"].max()
+medAll = df_alunos["media"].median()
+maiorMedia = df_alunos["media"].max()
+
+print(f"O maior número faltas foi: {maxFaltas}")
+print(f"Média geral das notas: {medAll}")
+print(f"Maior média: {maiorMedia}")
 
 
