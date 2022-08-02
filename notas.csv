@@ -1,5 +1,5 @@
-Aluno;Nota1;Nota2
-aluno_1;7;7
-aluno_2;3;10
-aluno_3;9;4
-aluno_4;10;6
+,Aluno,Nota1,Nota2,media,SITUACAO
+0,aluno_1,7,7,7.0,APROVADO
+1,aluno_2,3,10,6.5,REPROVADO
+2,aluno_3,9,4,6.5,REPROVADO
+3,aluno_4,10,6,8.0,APROVADO
