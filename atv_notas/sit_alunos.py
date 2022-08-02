@@ -47,4 +47,7 @@ print(f"O maior número faltas foi: {maxFaltas}")
 print(f"Média geral das notas: {medAll}")
 print(f"Maior média: {maiorMedia}")
 
+#Salvando em outro arquivo
+df_alunos.to_csv("alunos_situacao.csv")
+
 
