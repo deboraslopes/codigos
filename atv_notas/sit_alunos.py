@@ -16,7 +16,7 @@
 
 import pandas as pd
 
-df_alunos = pd.read_csv("notas_alunos", sep=";")
+df_alunos = pd.read_csv("notas_alunos.csv", sep=";")
 df_alunos.head()
 
 print('Tabela inicial')
