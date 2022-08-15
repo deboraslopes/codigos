@@ -7,31 +7,21 @@
 
 
 
-class numComplexo:
-    a = 2
-    b = 3
+a = 3 + 4j 
+b = complex(5,2)
+c = complex(12, 8)
 
-def novoNumero():
-    cad = numComplexo()
-    cad.a = int(input('Digite o primeiro valor do número complexo: '))
-    cad.b = int(input('Digite o segundo valor do número complexo: '))
-    num = complex(cad.a, cad.b)
-    return cad
+print(f"Soma",a + b + c)
+print(f"Subtração", b - c)
+print(f"Multiplicação", a * c)
+print(f"Divisão", c/a)
 
+print(a.real)
+print(a.imag)
 
+print(b.real)
+print(b.imag)
 
-escreveNumero(novoNumero(mostrar))
-
-
-#print(novoNumero)
-#a = 3 + 4j 
-#b = complex(5,2)
-#c = complex(12, 8)
-
-#print(f"Soma",a + b + c)
-#print(f"Subtração", b - c)
-#print(f"Multiplicação", a * c)
-#print(f"Divisão", c/a)
-#print(a.real)
-#print(a.imag)
+print(c.real)
+print(c.imag)
 
