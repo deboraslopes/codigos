@@ -17,6 +17,8 @@ function calculadora(){
         resultado.innerHTML = mult
     }else if(calc == '/'){
         resultado.innerHTML = div
+        rest = n1 % n2
+        resto.innerHTML = rest
     }else{
         resultado.innerHTML = 'ERRO'
     }
