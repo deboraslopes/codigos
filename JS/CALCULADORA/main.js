@@ -1,4 +1,5 @@
 function calculadora(){
+    
     var n1 = document.getElementById('campo1').value
     var n2 = document.getElementById('campo2').value
     var resultado = document.getElementById('resultado')
