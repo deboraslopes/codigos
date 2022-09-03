@@ -1,0 +1,1 @@
+Problema: João precisa calcular seu Índice de Massa Corporal (IMC) para avaliar o seu peso ideal. Sabendo que a fórmula para calcular o IMC é: peso ÷ altura², crie um programa que calcule e informe, de acordo com a classificação do IMC, se ele está com o peso ideal, na média, se precisa diminuir seu peso ou se João precisa aumentar seu peso.
