@@ -1,16 +1,20 @@
-function repApr(){
-    var nota1 = document.getElementById("campo1").value
-    var nota2 = document.getElementById("campo2").value
-    var nota3 = document.getElementById("campo3").value
-    var resultado = document.getAnimations("resultado").value
+function situacao(){
+    var nota1 = document.getElementById('campo1').value
+    var nota2 = document.getElementById('campo2').value
+    var nota3 = document.getElementById('campo3').value
+    var resultado = document.getElementById('resultado')
 
-    var somaNotas = Number(nota1) + Number (nota2) + Number (nota3)  //usando operador de atribuição '='
-    var media = somaNotas/3
+    var media = (Number(nota1) + Number (nota2) + Number (nota3))/3 //usando operador de atribuição '='
 
-    var resultado
+    resultado = media >= 7 ? resultado.innerHTML = "APROVADO!" :  resultado.innerHTML = "REPROVADO!" //usando operador ternário
 
+}
 
+function qntfalta(){
+    var n1 = document.getElementById('campo4').value
+    var n2 = document.getElementById('campo5').value
+    var nota_falta = document.getElementById('nota_falta')
 
-
+    nota_falta.innerHTML = 21 - n1 - n2
 
 }

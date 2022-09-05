@@ -12,7 +12,11 @@ h1{
 }
 h2{
     text-align: justify;
-    color: #0b0e0b;
+    color: #012201;
+}
+h3{
+    font-size: xx-large;
+    color: rgb(22, 3, 50);
 }
  p{
     text-align: justify;
@@ -26,15 +30,41 @@ margin-bottom: 10px;
 }
 
 button {
-background-color: #0ae80a;
-border: none;
-color: rgb(3, 56, 52);
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-border-radius: 5%;
-}
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
 
