@@ -1,0 +1,11 @@
+{
+  "name": "projeto_debora",
+  "version": "1.0.0",
+  "description": "Primeiro projeto em Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
