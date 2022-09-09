@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function funcCalc1(){ //função sem parametro
+        var n1 = document.getElementById('campo1').value
+        var n2 = document.getElementById('campo2').value
+        var resultado = document.getElementById('resultado')
+        var soma = Number(n1) + Number(n2)
+        resultado.innerHTML = soma
+    }
+
+    function funcCalc2(num1, num2){ //função com parametros
+        var result2 = document.getElementById('result2')
+        result2.innerHTML = num1 + num2 //return
+    }
+
+    const funcCalc3 = (a, b) => result3.innerHTML = a + b //arrow function
+    
+
+</script>
+
+<body>
+    <h1>Atividade Funções</h1>
+    <p>Crie um programa que contenha os seguintes tipos de funções: <br>
+
+        1. uma função tradicional com a palavra reservada “Function” e sem nenhum parâmetro;<br>
+        2. uma função tradicional com parâmetros e um retorno de valor;<br>
+        3. uma arrow function com parâmetros e que retorne um valor. <br><br>
+        
+        Crie um programa que utilize essas três funções de forma lógica, por exemplo: um programa de calculadora.
+        </p>
+        <hr>
+
+    <h2>Usando função tradicional sem parâmetros</h2>
+    <h4>Números para somar:</h4>
+    <label for="1">Primeiro número</label>
+    <input type="number" id="campo1"><br><br>
+    <label for="1">Segundo número</label>
+    <input type="number" name="" id="campo2"><br><br>
+    <button id="botao" onclick="funcCalc1()">calcular</button><br><br>
+    Resposta: <div id="resultado"></div>
+    <br>
+    <hr>
+
+    <h2>Usando função tradicional com parâmetros</h2>
+    <button id="botao2" onclick="funcCalc2(28,159)">Passar valores por parametro</button><br>
+    Resposta: <div id="result2"></div>
+    <br><hr>
+
+    <h2>Usando arrow function com parâmetros e retorno</h2>
+    <button id="botao3" onclick="funcCalc3(32,19)">Passar valores por parametro</button><br>
+    Resposta: <div id="result3"></div>
+    <br><hr>
+
+
+
+
+</body>
+</html>
