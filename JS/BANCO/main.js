@@ -1,14 +1,18 @@
-function banco(conta, saldo, tipo, ag){
-    this.conta = conta
-    this.saldo = saldo
-    this.tipo = tipo
-    this.ag = ag
+
+function banco(conta, saldo, tipo, agencia) {
+    (this.conta = conta),
+    (this.saldo = saldo),
+    (this.tipo = tipo),
+    (this.agencia = agencia)
 }
 
-banco.saldo = bucaSaldo
+var minhaConta = new banco ('Caixa Econômica', 5.01, 'corrente','001');
 
-var banco = {
-    saldo:function(){}
+this.buscarSaldo = function(){
+    return 
 }
 
-banco.saldo()
+document.getElementById("agencia-conta").innerHTML = 'Agência ' + minhaConta.agencia + "<br>";
+document.getElementById("tipo-conta").innerHTML = 'Tipo da conta: ' + minhaConta.tipo + "<br>";
+document.getElementById("saldo-conta").innerHTML = 'Saldo: R$ ' + minhaConta.saldo + "<br>";
+

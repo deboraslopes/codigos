@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0;}
+
+body {
+    font-family: arial,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(0, 0, 0);
+}
+
+#menu ul {
+    list-style: none;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#menu li {
+    position: relative;
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+#menu li a {color: rgb(255, 232, 232); text-decoration: none; padding: 5px 10px; display: block;}
+
+
+#menu li a:hover{
+    background:#333; 
+    color:#fff; 
+    -moz-box-shadow:0 3px 10px 0 #CCC; 
+    -webkit-box-shadow:0 3px 10px 0 #ccc; 
+    text-shadow:0px 0px 5px #fff; 
+}
+
+#menu li:hover ul, #menu li.over ul{display:block;}
+
+#menu li ul li{
+    border:1px solid #c0c0c0; 
+    width:150px;
+    }
+
+.logo {
+    margin: 10px;
+}
+
+header, #menu, #menu ul{
+   display: flex;
+}
+
+#menu{
+   flex: 1; /* isto é para a nav ocupar a largura toda menos a logo */
+   justify-content: center; /* alinha horizontalmente */
+   align-items: center; /* alinha verticalmente */
+}

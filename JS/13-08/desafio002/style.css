@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+body{
+    background-color: black;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+ul{
+    list-style: none;
+    margin-left: 600px;
+}
+
+li{
+    float: left;
+    margin: 0 .8rem;
+    padding: 10px;
+}
+
+
+li:last-child{
+    background-color: rgb(6, 121, 253);
+    border-radius: 8px;
+}
+
+header{
+    display: flex;
+}
+
