@@ -1,5 +1,5 @@
 function banco(conta, saldo, tipo, agencia) {
-    ;(this.conta = conta),
+    (this.conta = conta),
       (this.saldo = saldo),
       (this.tipo = tipo),
       (this.agencia = agencia)
@@ -33,18 +33,3 @@ function banco(conta, saldo, tipo, agencia) {
 
 
 
-
-  function B_banco(conta, saldo, tipo, ag){
-    this.conta = conta
-    this.saldo = saldo
-    this.tipo = tipo
-    this.ag = ag
-}
-
-banco.saldo = bucaSaldo
-
-var banco = {
-    saldo:function(){}
-}
-
-banco.saldo()
