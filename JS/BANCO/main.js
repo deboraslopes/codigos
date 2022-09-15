@@ -4,18 +4,30 @@ function banco(conta, saldo, tipo, agencia) {
     (this.saldo = saldo),
     (this.tipo = tipo),
     (this.agencia = agencia)
-    
-    this.buscarSaldo = function () {
-        return `Saldo: R$ ${this.saldo}`
-      }
+  
+    var valorDeposito = document.getElementById("campo1").value
+    if(valorDeposito > 0){
+      saldo = saldo + valorDeposito
+      alert ("Depósito realizado com sucesso")
+   }else if (valorDeposito < 0){
+       alert("Depósito não pode ser menor que zero")
+   }
+
+   var valorSaque = document.getElementById("campo2").value
+   if(valorSaque > saldo){
+     alert ("Saldo Insuficiente")
+  }else if (valorSaque < saldo){
+    saldo = saldo - valorSaque
+      alert("Saque realizado com sucesso")
+  }
+
 }
 
-var minhaConta = new banco ('Caixa Econômica', 5.01, 'corrente','001');
+let minhaConta = new banco ('Caixa Econômica', 5.01, 'corrente','001');
 
 
-
-document.getElementById("agencia-conta").innerHTML = 'Agência ' + minhaConta.agencia + "<br>";
+document.getElementById("saldo-conta").innerHTML = 'Saldo atual: ' + minhaConta.saldo + "<br>";
 document.getElementById("tipo-conta").innerHTML = 'Tipo da conta: ' + minhaConta.tipo + "<br>";
-document.getElementById("saldo-conta").innerHTML = 'Saldo: R$ ' + minhaConta.saldo + "<br>";
+document.getElementById("tipo-conta").innerHTML = 'Tipo da conta: ' + minhaConta.tipo + "<br>";
 
-var
+
