@@ -39,7 +39,7 @@ class computador {
         return this.hd;
     }
 
-    setHdd (hd) {
+    setHd (hd) {
         this.hd = hd;
     }
 
