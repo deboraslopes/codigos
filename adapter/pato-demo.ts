@@ -1,11 +1,10 @@
-export class PatoDemo {
-  
-    fazerQuaQua() : string {
-        return 'Qua Qua'
+import { pato } from "./pato"
+
+export class PatoDemo implements pato {
+    fazerQuaQua() : void {
+        console.log ('Qua Qua')
      }
- 
-     voarPato() : string {
-         return 'Voa Pato'
+     voarPato() : void {
+        console.log ('Pato Voando')
      }
-  
   }

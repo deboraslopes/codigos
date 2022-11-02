@@ -1,10 +1,10 @@
-import { Galinha } from "./galinha";
-import { Pato } from "./pato";
-import { PatoAdaptado } from "./pato-adaptador";
+ import { PatoDemo } from "./pato-demo"
+ import { GalinhaDemo } from "./galinha-demo"
+ import { PatoAdapter } from "./pato-adapter"
+ 
+ let pato = new PatoDemo()
+ let galinha = new GalinhaDemo()
 
-const adaptee : Galinha = new Galinha()
-const adapter : PatoAdaptado = new PatoAdaptado(adaptee)
-const target : Pato = new Pato(adapter)
-
-target.fazerQuaQua()
-target.voarPato()
+ let patoadapter = new PatoAdapter (galinha)
+ patoadapter.fazerQuaQua()
+ patoadapter.voarPato()
