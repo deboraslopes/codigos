@@ -1,0 +1,26 @@
+1.
+create table ALUNO
+(
+ID int
+DATA_NASCIMENTO character (10),
+TELEFONE int (10),
+primary key (ID),
+);
+
+
+2.
+alter table ALUNO change column TELEFONE CONTATO Character
+
+
+3.
+create table LIVRO
+(
+ID int,
+ISBN int(13),
+primary key (ID)
+);
+
+
+4.
+alter table livro drop column ISBN
+
