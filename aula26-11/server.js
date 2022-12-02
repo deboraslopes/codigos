@@ -3,9 +3,11 @@ const app = express()
 const bodyparser = require ("body-parser")
 const PORT = 8080
 
-const clientModel = require('./database/cliente')
+const Cliente = require("./database/cliente")
+// const clientModel = require('./database/cliente')
 
 const connection = require("./database/database")
+
 connection.authenticate().then(()=>{
     console.log("Conexão com sucesso")
 }).catch(()=>{
@@ -17,16 +19,6 @@ app.use(bodyparser.json())
 
 app.set('view engine', 'ejs')
 
-app.get("/",(req, res)=>{
-    var nome = "Débora";
-    var idade = 39
-    res.render("index",{
-        nome: nome,
-        idade: idade,
-        empresa: "Softex",
-        alunos: 100
-    })
-})
 
 app.get("/sobre",(req, res)=>{
     res.send("Página Sobre")
@@ -39,7 +31,12 @@ app.get("/cadastrar",(req,res)=>{
 app.post("/salvarcliente", (req, res)=>{
     var nome = req.body.nome
     var idade = req.body.idade
-
+    Cliente.create({
+        nome: nome,
+        idade: idade
+    }).then(()=>{
+        res.redirect("/")
+    })  
 })
 
 app.listen (PORT,() =>{
