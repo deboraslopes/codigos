@@ -1,21 +1,22 @@
 const Sequelize = require ('sequelize')
-const connection = require ("./database")
+const connection = require ("../database/database")
 
 const Produtos = connection.define('produtos', {
-    produtos:{
+    nome:{
         type:Sequelize.STRING,
         allowNull: false
     },
-    price:{
-        type: Sequelize.NUMBER,
+    valor:{
+        type: Sequelize.FLOAT,
         allowNull: false
     },
     qntd:{
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
         allowNull: false
     }
 })
 
 Produtos.sync({force:false})
+
 module.exports = Produtos
 
