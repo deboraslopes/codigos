@@ -5,13 +5,13 @@ app.set("view engine", "ejs")
 
 const connection = require("./database/database")
 
+const Produtos = require("./database/produtos")
+
 connection.authenticate().then(()=>{
     console.log("Conexão com sucesso")
 }).catch(()=>{
     console.log("Erro na conexão")
 })
-
-const Produtos = require ("./database/produtos")
 
 app.get('/', (req, res) => {
     res.send("Página Principal da Aplicação")
