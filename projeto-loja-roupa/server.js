@@ -1,6 +1,7 @@
 const express = require ('express')
 const app = express()
 const PORT = 8080
+
 app.set("view engine", "ejs")
 
 const connection = require("./database/database")
@@ -8,9 +9,9 @@ const connection = require("./database/database")
 const Produtos = require("./database/produtos")
 
 connection.authenticate().then(()=>{
-    console.log("Conexão com sucesso")
+    console.log("Conexão com banco realizada com sucesso")
 }).catch(()=>{
-    console.log("Erro na conexão")
+    console.log("Erro na conexão do banco de dados")
 })
 
 app.get('/', (req, res) => {
