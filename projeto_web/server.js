@@ -19,7 +19,7 @@ app.use(bodyparser.json())
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) =>{
-    return res.json({titulo: "GET rodando"})
+    return res.json({titulo: "Livro Consultado"})
 })
 
 app.post('/artigo', (req, res) =>{

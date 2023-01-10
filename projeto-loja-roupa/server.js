@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.send("Página Principal da Aplicação")
 })
 
-app.get('/cadastrar', (req, res) => {
+app.get('/consultar', (req, res) => {
     res.render("cadastrar")
 })
 
