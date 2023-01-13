@@ -23,23 +23,17 @@ app.get('/', (req, res) =>{
 })
 
 app.post('/novopaciente', (req, res) => {
-    var id = req.body.id
-    var nome = req.body.nome
-    var idade = req.body.idade
-    Paciente.create({
-        id : id,
-        nome : nome,
-        idade : idade
-    }).then(()=>{
-        res.json("Paciente cadastrado com sucesso")})
+    const {id, nome, idade} = req.body
+    const novoPaciente = Paciente.create({id, nome, idade}) 
+    res.status(200).json({message:'Paciente cadastrado com sucesso!'})
 })
 
 app.get('/pacientes', async(req, res) => {
     await Paciente.findAll()
-    .then((dataHome) => {
+    .then((Pacientes) => {
         return res.json({
             erro: false,
-            dataHome : dataHome
+            Pacientes : Pacientes
         })
     })
 })
@@ -51,6 +45,17 @@ app.delete('/pacientes/:id', async(req, res) =>{
         }
     })
     res.status(200).json({message: 'Paciente excluido com sucesso.'})
+})
+
+app.put('/pacientes/:id', async(req, res) =>{
+    const {id, nome, idade} = req.body
+    await Paciente.update(
+        {nome, idade},
+        {
+            where:{id: req.params.id}
+        }
+    )
+    res.status(200).json({message: 'Dados do paciente atualizados!'})
 })
 
 app.listen(porta, () => {
